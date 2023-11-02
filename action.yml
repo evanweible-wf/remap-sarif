@@ -20,6 +20,6 @@ runs:
       run: |
         unset LD_PRELOAD
         unset PYTHONSTARTUP
-        python3 -mpip install -r "${{ github.action_path }}/requirements.txt"
-        python3 "${{ github.action_path }}/remap_sarif.py" "${{ inputs.input }}" "${{ inputs.sourceroot }}" --output "${{ inputs.output }}"
+        python3.10 -mpip install -r "${{ github.action_path }}/requirements.txt"
+        python3.10 "${{ github.action_path }}/remap_sarif.py" "${{ inputs.input }}" "${{ inputs.sourceroot }}" --output "${{ inputs.output }}"
       shell: bash
